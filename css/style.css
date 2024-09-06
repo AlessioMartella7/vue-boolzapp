@@ -8,9 +8,7 @@
 /* General */
 
 body{
-    font-family:'Rubik Mono One', sans-serif;
-    
-    
+    font-family: "Lato", sans-serif;
 }
 
 /* Utilities */
@@ -29,64 +27,64 @@ body{
         #DADBD4 20%
         
         );
-    }
+}
     
-    .boolzapp {
-        display: flex;
-        padding: 45px 0;
-    }
+.boolzapp {
+    display: flex;
+    padding: 45px 0;
+}
     
-    /* contacts field */
+/* contacts field */
     
-    .contacts-field {
-        width: 30%;
-    }
+.contacts-field {
+    width: 30%;
+}
     
-    .contacts-field header {
-      
-        background-color: beige;
-    }
+.contacts-field header {    
+    background-color: beige;
+}
     
-    .contacts-field nav {
-        height: calc(90vh - 190px);
-        overflow: auto;
-        background-color: cadetblue;
-    }
+.contacts-field nav {
+    height: calc(90vh - 190px);
+    overflow: auto;
+    background-color: cadetblue;
+}
 
-    div.user {
-        height: 70px;
-        background-color: aliceblue;
-    }
+div.user {
+    height: 70px;
+    background-color: #EAEAEA;
+}
 
-    div.notifications {
-        height: 80px ;
-        background-color: aqua;
-    }
+div.notifications {
+    height: 80px ;
+    background-color: aqua;
+}
 
-    div.search {
-        height: 40px;
-        background-color: rgb(221, 187, 48);
-    }
+div.search {
+    height: 40px;
+    background-color: rgb(221, 187, 48);
+}
 
-    /* message board */
-    .message-board {
-        flex-basis: 70%;
-    }
+/* message board */
+.message-board {
+    flex-basis: 70%;
+}
     
-    .message-board header {
-        height: 70px;
-        background-color: aquamarine;
-    }
+.message-board header {
+    height: 70px;
+    background-color: #EAEAEA;
+    border-left: 1px solid lightgray;
+}
 
-    .message-board footer {
-        height: 70px;
-        background-color: azure;
-    }
+.message-board footer {
+    height: 70px;
+    background-color: azure;
+}
 
-    .message-board main {
-        height: calc(90vh - 140px);
-        overflow: auto;
-        background-image:url(../img/mine.png);
+.message-board main {
+    height: calc(90vh - 140px);
+    overflow: auto;
+    background-image:url(../img/mine.png);
         
-    }
+}
 
