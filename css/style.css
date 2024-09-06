@@ -11,6 +11,12 @@ body{
     font-family: "Lato", sans-serif;
 }
 
+time {
+    display: block;
+    text-align: right;
+    font-size: 10px;
+}
+
 /* Utilities */
 
 .container{
@@ -47,7 +53,7 @@ body{
 .contacts-field nav {
     height: calc(90vh - 190px);
     overflow: auto;
-    background-color: cadetblue;
+    background-color: #fff;
 }
 
 div.user {
@@ -57,12 +63,12 @@ div.user {
 
 div.notifications {
     height: 80px ;
-    background-color: aqua;
+    background-color: #8EDAFC;
 }
 
 div.search {
     height: 40px;
-    background-color: rgb(221, 187, 48);
+    background-color: #FAFAFA;
 }
 
 /* message board */
@@ -78,13 +84,36 @@ div.search {
 
 .message-board footer {
     height: 70px;
-    background-color: azure;
+    background-color:#F3EEEA;
 }
 
 .message-board main {
     height: calc(90vh - 140px);
     overflow: auto;
     background-image:url(../img/mine.png);
-        
+    padding: 40px 60px;
+    display: flex;    
+    justify-content: space-between;
+
+}
+ main > div {
+    flex-basis: 40%;
+    border: 1px dashed black;
+    padding: 0 10px;
+}
+
+.message-field > div {
+    min-height: 20px;
+    padding: 10px 10px 5px;
+    border-radius: 12px;
+    
+}
+
+.message-field .sent-message{
+    background-color: #D5F9BA;
+}
+
+.message-field .recived-message{
+    background-color: #fff;
 }
 
