@@ -9,8 +9,8 @@
 
 body{
     font-family:'Rubik Mono One', sans-serif;
-  
-   
+    
+    
 }
 
 /* Utilities */
@@ -25,52 +25,68 @@ body{
     height: (100vh);
     background: linear-gradient(
         to bottom,
-        #009688 15%,
-        #DADBD4 15%
+        #009688 20%,
+        #DADBD4 20%
         
-      );
-}
+        );
+    }
+    
+    .boolzapp {
+        display: flex;
+        padding: 45px 0;
+    }
+    
+    /* contacts field */
+    
+    .contacts-field {
+        width: 30%;
+    }
+    
+    .contacts-field header {
+      
+        background-color: beige;
+    }
+    
+    .contacts-field nav {
+        height: calc(90vh - 190px);
+        overflow: auto;
+        background-color: cadetblue;
+    }
 
-.boolzapp {
-    display: flex;
-    padding: 45px 0;
-}
+    div.user {
+        height: 70px;
+        background-color: aliceblue;
+    }
 
-/* message board */
-.message-board {
-    flex-basis: 70%;
-}
+    div.notifications {
+        height: 80px ;
+        background-color: aqua;
+    }
 
-.message-board header {
-    height: 80px;
-    background-color: aquamarine;
-}
+    div.search {
+        height: 40px;
+        background-color: rgb(221, 187, 48);
+    }
 
-.message-board footer {
-    height: 80px;
-    background-color: azure;
-}
+    /* message board */
+    .message-board {
+        flex-basis: 70%;
+    }
+    
+    .message-board header {
+        height: 70px;
+        background-color: aquamarine;
+    }
 
-.message-board main {
-    height: calc(90vh - 160px);
-    overflow: auto;
-    background-color: darkslateblue;
-}
+    .message-board footer {
+        height: 70px;
+        background-color: azure;
+    }
 
+    .message-board main {
+        height: calc(90vh - 140px);
+        overflow: auto;
+        background-image:url(../img/mine.png);
+        
+    }
 
-/* contacts field */
-
-.contacts-field {
-    width: 30%;
-}
-
-.contacts-field header {
-    height: 80px;
-    background-color: beige;
-}
-
-.contacts-field nav {
-    height: calc(90vh - 80px);
-    overflow: auto;
-    background-color: cadetblue;
-}
