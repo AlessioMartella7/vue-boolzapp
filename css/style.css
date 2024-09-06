@@ -16,16 +16,61 @@ body{
 /* Utilities */
 
 .container{
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
+
 .background {
-    height: 100vh;
+    height: (100vh);
     background: linear-gradient(
         to bottom,
-        #009688 20%,
-        #DADBD4 20%
+        #009688 15%,
+        #DADBD4 15%
         
       );
+}
+
+.boolzapp {
+    display: flex;
+    padding: 45px 0;
+}
+
+/* message board */
+.message-board {
+    flex-basis: 70%;
+}
+
+.message-board header {
+    height: 80px;
+    background-color: aquamarine;
+}
+
+.message-board footer {
+    height: 80px;
+    background-color: azure;
+}
+
+.message-board main {
+    height: calc(90vh - 160px);
+    overflow: auto;
+    background-color: darkslateblue;
+}
+
+
+/* contacts field */
+
+.contacts-field {
+    width: 30%;
+}
+
+.contacts-field header {
+    height: 80px;
+    background-color: beige;
+}
+
+.contacts-field nav {
+    height: calc(90vh - 80px);
+    overflow: auto;
+    background-color: cadetblue;
 }
