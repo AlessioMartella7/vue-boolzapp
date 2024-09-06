@@ -9,6 +9,8 @@
 
 body{
     font-family:'Rubik Mono One', sans-serif;
+  
+   
 }
 
 /* Utilities */
@@ -16,4 +18,14 @@ body{
 .container{
     max-width: 1000px;
     margin: 0 auto;
+}
+
+.background {
+    height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        #009688 20%,
+        #DADBD4 20%
+        
+      );
 }
