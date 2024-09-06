@@ -94,53 +94,6 @@ div.search {
     background-color: #FAFAFA;
 }
 
-/* message board */
-.message-board {
-    flex-basis: 65%;
-}
-    
-.message-board header {
-    height: 70px;
-    background-color: #EAEAEA;
-    border-left: 1px solid lightgray;
-}
-
-.message-board footer {
-    height: 70px;
-    background-color:#F3EEEA;
-}
-
-.message-board main {
-    height: calc(90vh - 140px);
-    overflow: auto;
-    background-image:url(../img/mine.png);
-    padding: 40px 60px;
-    display: flex;    
-    justify-content: space-between;
-
-}
- main > div {
-    flex-basis: 40%;
-    border: 1px dashed black;
-    padding: 0 10px;
-}
-
-.message-field > div {
-    margin-bottom: 10px;
-    min-height: 20px;
-    padding: 10px 10px 5px;
-    border-radius: 12px;
-    
-}
-
-.message-field .sent-message{
-    background-color: #D5F9BA;
-}
-
-.message-field .recived-message{
-    background-color: #fff;
-}
-
 /* lista contatti */
 
 li.contact-card {
@@ -165,3 +118,60 @@ li.contact-card {
 .contact-card > p {
     font-size: 12px ;
 }
+
+/* message board */
+.message-board {
+    flex-basis: 65%;
+}
+    
+.message-board header {
+    height: 70px;
+    background-color: #EAEAEA;
+    border-left: 1px solid lightgray;
+}
+
+.message-board footer {
+    height: 70px;
+    background-color:#F3EEEA;
+}
+
+.message-board main {
+    height: calc(90vh - 140px);
+    overflow: auto;
+    background-image:url(../img/mine.png);
+    padding: 40px 60px;
+
+}
+ main > div {
+    width: 100%;
+    border: 1px dashed black;
+    padding: 0 10px;
+}
+
+.message-field {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.message-field > div {
+    margin-bottom: 10px;
+    min-height: 20px;
+    padding: 10px 10px 5px;
+    border-radius: 12px;
+    
+}
+
+.message-field .sent-message{
+    background-color: #D5F9BA;
+    width:45%;
+    align-self: flex-end;
+    
+}
+
+.message-field .recived-message{
+    background-color: #fff;
+    width:45%;
+    align-self: flex-start;
+}
+
