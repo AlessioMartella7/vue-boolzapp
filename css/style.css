@@ -15,8 +15,16 @@ time {
     display: block;
     text-align: right;
     font-size: 10px;
+    color: lightgray;
 }
 
+img {
+    max-width: 100%;
+}
+
+h4 {
+    font-size: 18px;
+}
 /* Utilities */
 
 .container{
@@ -43,7 +51,7 @@ time {
 /* contacts field */
     
 .contacts-field {
-    width: 30%;
+    width: 35%;
 }
     
 .contacts-field header {    
@@ -73,7 +81,7 @@ div.search {
 
 /* message board */
 .message-board {
-    flex-basis: 70%;
+    flex-basis: 65%;
 }
     
 .message-board header {
@@ -103,6 +111,7 @@ div.search {
 }
 
 .message-field > div {
+    margin-bottom: 10px;
     min-height: 20px;
     padding: 10px 10px 5px;
     border-radius: 12px;
@@ -117,3 +126,32 @@ div.search {
     background-color: #fff;
 }
 
+/* lista contatti */
+
+li.contact-card {
+
+    height: 85px;
+    width: 100%;
+    padding: 10px;
+    border: 1px dashed red;
+    display: flex;
+}
+
+.contact-card .contact-img{
+    border-radius: 50%;
+
+}
+
+.contact-card .contact-info {
+    flex-basis: 70%;
+    margin-left: 20px;
+    line-height: 135%;
+}
+
+.contact-card p {
+    color: lightgray;
+}
+
+.contact-card > p {
+    font-size: 12px ;
+}
