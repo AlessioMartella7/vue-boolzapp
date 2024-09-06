@@ -27,7 +27,8 @@ h4 {
     font-size: 18px;
 }
 
-.fa-solid {
+.fa-solid,
+.fa-regular {
     color: gray;
 }
 /* Utilities */
@@ -193,3 +194,24 @@ li.contact-card {
     align-self: flex-start;
 }
 
+/* message board footer */
+
+.message-bar {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.message-bar input {
+    flex-basis: 80%;
+    height: 70%;
+    border-color: transparent;
+    border-radius: 12px;
+    text-indent: 20px;
+}
+
+::placeholder {
+    color: gray;
+    font-weight: 600;
+}
