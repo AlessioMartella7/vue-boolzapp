@@ -33,6 +33,10 @@ h4 {
     color: gray;
     cursor: pointer;
 }
+
+a {
+    color: gray;
+}
 /* Utilities */
 
 .container{
@@ -87,9 +91,28 @@ div.user {
    align-items: center;
 }
 
+/* notifications */
 div.notifications {
     height: 80px ;
     background-color: #8EDAFC;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+}
+
+.bell {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.bell i {
+  color: #8EDAFC;
 }
 
 /* search bar */
