@@ -19,7 +19,8 @@ time {
 }
 
 img {
-    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
 }
 
 h4 {
@@ -66,7 +67,21 @@ h4 {
 
 div.user {
     height: 70px;
+    padding: 10px;
     background-color: #EAEAEA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user .user-data {
+   height: 100%;
+   display: flex;
+   align-items: center;
+}
+
+.user .user-icons {
+    color: gray;
 }
 
 div.notifications {
@@ -135,11 +150,6 @@ li.contact-card {
     padding: 10px;
     border: 1px dashed red;
     display: flex;
-}
-
-.contact-card .contact-img{
-    border-radius: 50%;
-
 }
 
 .contact-card .contact-info {
