@@ -26,6 +26,10 @@ img {
 h4 {
     font-size: 18px;
 }
+
+.fa-solid {
+    color: gray;
+}
 /* Utilities */
 
 .container{
@@ -80,10 +84,6 @@ div.user {
    align-items: center;
 }
 
-.user .user-icons {
-    color: gray;
-}
-
 div.notifications {
     height: 80px ;
     background-color: #8EDAFC;
@@ -103,17 +103,12 @@ li.contact-card {
     padding: 10px;
     border: 1px dashed red;
     display: flex;
+    cursor: pointer;
+    justify-content: space-between;
 }
 
-.contact-card .contact-info {
-    flex-basis: 70%;
-    margin-left: 20px;
-    line-height: 135%;
-}
 
-.contact-card p {
-    color: lightgray;
-}
+
 
 .contact-card > p {
     font-size: 12px ;
@@ -123,28 +118,51 @@ li.contact-card {
 .message-board {
     flex-basis: 65%;
 }
-    
+
+/* message board header */
 .message-board header {
-    height: 70px;
+    
     background-color: #EAEAEA;
     border-left: 1px solid lightgray;
+ 
 }
 
+.current-contact {
+    display: flex;
+    height: 70px;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+.contact-info {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info p {
+    color: gray;
+}
+
+/* message board footer */
 .message-board footer {
     height: 70px;
     background-color:#F3EEEA;
 }
 
+/* main */ 
 .message-board main {
     height: calc(90vh - 140px);
     overflow: auto;
     background-image:url(../img/mine.png);
     padding: 40px 60px;
-
 }
+
  main > div {
     width: 100%;
-    border: 1px dashed black;
     padding: 0 10px;
 }
 
