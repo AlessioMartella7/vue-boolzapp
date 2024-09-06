@@ -97,7 +97,7 @@ div.notifications {
     background-color: #8EDAFC;
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 15px;
     gap: 15px;
 }
 
@@ -145,7 +145,7 @@ li.contact-card {
 
     height: 85px;
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     border: 1px dashed red;
     display: flex;
     cursor: pointer;
@@ -242,6 +242,7 @@ li.contact-card {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 0 15px;
 }
 
 .message-bar input {
