@@ -202,13 +202,25 @@ const { createApp } = Vue
         //invio nuovo messaggio
         sendNewMessage(addNewMessage){
             
-            
             this.contacts[this.currentIndex].messages.push(addNewMessage);
             //reset
             this.addNewMessage= {
                 message:'',
                 status: 'sent'
             };
-        }
+
+            //timer risposta automatica e richiamo metodo
+           const timer = setTimeout(this.replyMessage, 1000);
+
+        },
+
+        //generazione risposta automatica
+        replyMessage(){
+            const contactReply = {
+                message: 'ok',
+                status: 'received'
+            }
+            this.contacts[this.currentIndex].messages.push(contactReply);
+        },
     }
   }).mount('#app')
