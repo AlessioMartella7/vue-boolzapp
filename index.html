@@ -104,9 +104,10 @@
                             <div class="current-contact">
                                 <!-- dati contatto attuale -->
                                 <div class="contact-info">
-                                    <img class="contact-img" :src="contacts[currentIndex].avatar" alt="contatto1">
+                                    <img class="contact-img" :src="contacts[currentIndex].avatar"
+                                        :alt="contacts[currentIndex].name">
                                     <div>
-                                        <h4>Nome Contatto</h4>
+                                        <h4>{{contacts[currentIndex].name}}</h4>
                                         <p>ultimo accesso oggi alle 12:00</p>
                                     </div>
                                 </div>
@@ -124,29 +125,19 @@
                         <main>
 
                             <!-- messaggi inviati -->
-                            <div class="message-field">
-                                <div class="sent-message">
-                                    <p>messaggio inviato</p>
+                            <div class="message-field" v-for="(message,index) in contacts[currentIndex].messages">
+                                <div v-if="message.status === 'sent' " class="sent-message">
+                                    <p>{{message.message}}</p>
                                     <time>12:11</time>
                                 </div>
-                                <div class="sent-message">
-                                    <p>messaggio inviato</p>
-                                    <time>12:11</time>
-                                </div>
-                            </div>
 
-                            <!-- messaggi ricevuti -->
-                            <div class="message-field">
-                                <div class="recived-message">
-                                    <p>messaggio ricevuto</p>
-                                    <time>12:11</time>
-                                </div>
-                                <div class="recived-message">
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque non veritatis
-                                        sequi molestiae officia corporis dolorem! Aperiam provident aliquam commodi
-                                        maxime iusto perspiciatis veniam a necessitatibus numquam, facilis blanditiis
-                                        unde.</p>
-                                    <time>12:11</time>
+
+                                <!-- messaggi ricevuti -->
+                                <div class="message-field">
+                                    <div v-if="message.status === 'received' " class="recived-message">
+                                        <p>{{message.message}}</p>
+                                        <time>12:11</time>
+                                    </div>
                                 </div>
                             </div>
                         </main>
