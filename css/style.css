@@ -146,7 +146,7 @@ li.contact-card {
     height: 85px;
     width: 100%;
     padding: 15px;
-    border: 1px dashed red;
+    border-top: 1px solid lightgrey ;
     display: flex;
     cursor: pointer;
     justify-content: space-between;

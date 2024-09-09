@@ -16,6 +16,8 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+
+        currentIndex:0,
         contacts: [
             {
                 name: 'Michele',
@@ -178,9 +180,12 @@ const { createApp } = Vue
                     }
                 ],
             }
-        ],
-        
-        methods:{},
-      }
+        ]
+    }
+},
+    methods:{
+        setCurrentContact(index){
+            this.currentIndex = index;
+        }
     }
   }).mount('#app')

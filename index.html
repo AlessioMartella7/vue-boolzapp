@@ -81,9 +81,10 @@
                         <nav>
                             <ul>
                                 <!-- dati contatto -->
-                                <li class="contact-card" v-for="(contact, index) in contacts">
+                                <li class="contact-card" v-for="(contact, index) in contacts"
+                                    @click="setCurrentContact(index)">
                                     <div class="contact-info">
-                                        <img class="contact-img" :src="contact.avatar" alt="contatto1">
+                                        <img class="contact-img" :src="contact.avatar" :alt="contact.name">
                                         <div>
                                             <h4>{{contact.name}}</h4>
                                             <p>{{contact.messages[contact.messages.length -1].message}}</p>
@@ -103,7 +104,7 @@
                             <div class="current-contact">
                                 <!-- dati contatto attuale -->
                                 <div class="contact-info">
-                                    <img class="contact-img" src="img/avatar_1.png" alt="contatto1">
+                                    <img class="contact-img" :src="contacts[currentIndex].avatar" alt="contatto1">
                                     <div>
                                         <h4>Nome Contatto</h4>
                                         <p>ultimo accesso oggi alle 12:00</p>
