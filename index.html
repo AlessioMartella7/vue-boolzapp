@@ -81,82 +81,12 @@
                         <nav>
                             <ul>
                                 <!-- dati contatto -->
-                                <li class="contact-card">
+                                <li class="contact-card" v-for="(contact, index) in contacts">
                                     <div class="contact-info">
-                                        <img class="contact-img" src="img/avatar_1.png" alt="contatto1">
+                                        <img class="contact-img" :src="contact.avatar" alt="contatto1">
                                         <div>
-                                            <h4>Nome Contatto</h4>
-                                            <p>ultimo messaggio inviato</p>
-                                        </div>
-                                    </div>
-                                    <p>12:00</p>
-                                </li>
-                                <li class="contact-card">
-                                    <div class="contact-info">
-                                        <img class="contact-img" src="img/avatar_1.png" alt="contatto1">
-                                        <div>
-                                            <h4>Nome Contatto</h4>
-                                            <p>ultimo messaggio inviato</p>
-                                        </div>
-                                    </div>
-                                    <p>12:00</p>
-                                </li>
-                                <li class="contact-card">
-                                    <div class="contact-info">
-                                        <img class="contact-img" src="img/avatar_1.png" alt="contatto1">
-                                        <div>
-                                            <h4>Nome Contatto</h4>
-                                            <p>ultimo messaggio inviato</p>
-                                        </div>
-                                    </div>
-                                    <p>12:00</p>
-                                </li>
-                                <li class="contact-card">
-                                    <div class="contact-info">
-                                        <img class="contact-img" src="img/avatar_1.png" alt="contatto1">
-                                        <div>
-                                            <h4>Nome Contatto</h4>
-                                            <p>ultimo messaggio inviato</p>
-                                        </div>
-                                    </div>
-                                    <p>12:00</p>
-                                </li>
-                                <li class="contact-card">
-                                    <div class="contact-info">
-                                        <img class="contact-img" src="img/avatar_1.png" alt="contatto1">
-                                        <div>
-                                            <h4>Nome Contatto</h4>
-                                            <p>ultimo messaggio inviato</p>
-                                        </div>
-                                    </div>
-                                    <p>12:00</p>
-                                </li>
-                                <li class="contact-card">
-                                    <div class="contact-info">
-                                        <img class="contact-img" src="img/avatar_1.png" alt="contatto1">
-                                        <div>
-                                            <h4>Nome Contatto</h4>
-                                            <p>ultimo messaggio inviato</p>
-                                        </div>
-                                    </div>
-                                    <p>12:00</p>
-                                </li>
-                                <li class="contact-card">
-                                    <div class="contact-info">
-                                        <img class="contact-img" src="img/avatar_1.png" alt="contatto1">
-                                        <div>
-                                            <h4>Nome Contatto</h4>
-                                            <p>ultimo messaggio inviato</p>
-                                        </div>
-                                    </div>
-                                    <p>12:00</p>
-                                </li>
-                                <li class="contact-card">
-                                    <div class="contact-info">
-                                        <img class="contact-img" src="img/avatar_1.png" alt="contatto1">
-                                        <div>
-                                            <h4>Nome Contatto</h4>
-                                            <p>ultimo messaggio inviato</p>
+                                            <h4>{{contact.name}}</h4>
+                                            <p>{{contact.messages[contact.messages.length -1].message}}</p>
                                         </div>
                                     </div>
                                     <p>12:00</p>
@@ -235,10 +165,6 @@
                     </article>
 
                 </div>
-
-
-
-
 
             </div>
 
