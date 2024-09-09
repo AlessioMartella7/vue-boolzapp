@@ -17,7 +17,16 @@ const { createApp } = Vue
     data() {
       return {
 
+        //nuovo messaggio
+        addNewMessage: {
+            message:'',
+            status: 'sent'
+        },
+
+        //indice corrente
         currentIndex:0,
+
+        //lista contatti
         contacts: [
             {
                 name: 'Michele',
@@ -184,8 +193,22 @@ const { createApp } = Vue
     }
 },
     methods:{
+
+        // impostiamo il current index
         setCurrentContact(index){
             this.currentIndex = index;
+        },
+        
+        //invio nuovo messaggio
+        sendNewMessage(addNewMessage){
+            
+            
+            this.contacts[this.currentIndex].messages.push(addNewMessage);
+            //reset
+            this.addNewMessage= {
+                message:'',
+                status: 'sent'
+            };
         }
     }
   }).mount('#app')

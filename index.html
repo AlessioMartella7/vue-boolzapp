@@ -148,7 +148,8 @@
                                 <!-- menu icone -->
                                 <i class="fa-regular fa-fw fa-xl fa-face-smile"></i>
                                 <!-- input bar -->
-                                <input type="text" placeholder="Scrivi un messaggio">
+                                <input type="text" v-model="addNewMessage.message" placeholder="Scrivi un messaggio"
+                                    @keyup.enter="sendNewMessage(addNewMessage)">
                                 <!-- messaggio vocale -->
                                 <i class="fa-solid fa-xl fa-fw fa-microphone"></i>
                             </div>
@@ -163,6 +164,8 @@
         </div>
     </div>
 
+    <!-- Luxon -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.5.0/build/global/luxon.min.js"></script>
     <!-- JS -->
     <script src="js/script.js"></script>
 </body>
