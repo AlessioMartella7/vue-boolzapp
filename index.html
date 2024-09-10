@@ -72,7 +72,7 @@
                                 <button>
                                     <i class="fa-solid fa-fw fa-lg fa-magnifying-glass"></i>
                                 </button>
-                                <input type="text" placeholder="Cerca o inizia una nuova chat">
+                                <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchField">
                             </div>
 
                         </header>
@@ -81,8 +81,10 @@
                         <nav>
                             <ul>
                                 <!-- dati contatto -->
-                                <li class="contact-card" v-for="(contact, index) in contacts"
+
+                                <li class="contact-card" v-for="(contact, index) in filteredContacts"
                                     @click="setCurrentContact(index)">
+
                                     <div class="contact-info">
                                         <img class="contact-img" :src="contact.avatar" :alt="contact.name">
                                         <div>

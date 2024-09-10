@@ -17,6 +17,10 @@ const { createApp } = Vue
     data() {
       return {
 
+        //input di ricerca
+
+        searchField : '',
+        
         //nuovo messaggio
         addNewMessage: {
             message:'',
@@ -176,6 +180,7 @@ const { createApp } = Vue
                         date: '10/01/2020 15:30:55',
                         message: 'Ciao, andiamo a mangiare la pizza stasera?',
                         status: 'received'
+                        
                     },
                     {
                         date: '10/01/2020 15:50:00',
@@ -190,8 +195,8 @@ const { createApp } = Vue
                 ],
             }
         ]
-    }
-},
+        }
+    },
     methods:{
 
         // impostiamo il current index
@@ -222,5 +227,20 @@ const { createApp } = Vue
             }
             this.contacts[this.currentIndex].messages.push(contactReply);
         },
-    }
+ 
+     },
+
+     computed: {
+        // filtro i contatti in base l'input del campo di ricerca
+        filteredContacts() {
+            //se il campo di ricerca è vuoto visulizza tutti i contatti
+          if (this.searchField.trim() === '') {
+            return this.contacts;
+            //se si comincia a digitare effettua un filtraggio
+          } else {
+          return this.contacts.filter((contact) =>
+            contact.name.toLowerCase().includes(this.searchField.toLowerCase())
+          );}
+        },
+      },
   }).mount('#app')
