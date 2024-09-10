@@ -128,15 +128,18 @@
 
                             <!-- messaggi inviati -->
                             <div class="message-field" v-for="(message,index) in contacts[currentIndex].messages">
-                                <div v-if="message.status === 'sent' " class="sent-message">
+                                <div v-if="message.status === 'sent' " class="sent-message"
+                                    @click="deleteMessage(index)">
                                     <p>{{message.message}}</p>
                                     <time>12:11</time>
+
                                 </div>
 
 
                                 <!-- messaggi ricevuti -->
                                 <div class="message-field">
-                                    <div v-if="message.status === 'received' " class="recived-message">
+                                    <div v-if="message.status === 'received' " class="recived-message"
+                                        @click="deleteMessage(index)">
                                         <p>{{message.message}}</p>
                                         <time>12:11</time>
                                     </div>

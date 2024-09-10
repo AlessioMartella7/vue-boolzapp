@@ -201,7 +201,11 @@ const { createApp } = Vue
 
         // impostiamo il current index
         setCurrentContact(index){
+
+            //recupero l'indice del contatto filtratto
             const selectedContact = this.filteredContacts[index];
+
+            //imposto l'indice originale che si trovava nella lista contacts al contatto filtrato
             this.currentIndex = this.contacts.findIndex(contact => contact.name === selectedContact.name);
         },
         
@@ -228,7 +232,11 @@ const { createApp } = Vue
             }
             this.contacts[this.currentIndex].messages.push(contactReply);
         },
- 
+        
+        //cancellare un messaggio
+        deleteMessage(index){
+            this.contacts[this.currentIndex].messages.splice(index,1);
+        },
      },
 
      computed: {
