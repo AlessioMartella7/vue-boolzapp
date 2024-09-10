@@ -201,7 +201,8 @@ const { createApp } = Vue
 
         // impostiamo il current index
         setCurrentContact(index){
-            this.currentIndex = index;
+            const selectedContact = this.filteredContacts[index];
+            this.currentIndex = this.contacts.findIndex(contact => contact.name === selectedContact.name);
         },
         
         //invio nuovo messaggio
@@ -238,7 +239,7 @@ const { createApp } = Vue
             return this.contacts;
             //se si comincia a digitare effettua un filtraggio
           } else {
-          return this.contacts.filter((contact) =>
+          return this.contacts.filter((contact) => 
             contact.name.toLowerCase().includes(this.searchField.toLowerCase())
           );}
         },
